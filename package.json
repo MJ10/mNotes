@@ -1,6 +1,6 @@
 {
-  "name": "mytasklist",
-  "version": "0.0.0",
+  "name": "mnotes",
+  "version": "0.1.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
