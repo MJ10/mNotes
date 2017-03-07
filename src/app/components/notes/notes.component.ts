@@ -4,14 +4,11 @@ import { User } from '../../../User';
 import { Note } from '../../../Note'
 import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 import { Router } from '@angular/router';
-import { moveIn } from '../../router.animations';
 
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.css'],
-  animations: [moveIn()],
-  host: {'[@moveIn]': ''}
 })
 export class NotesComponent {
   notes: Note[];

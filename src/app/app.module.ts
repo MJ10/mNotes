@@ -16,7 +16,11 @@ import { routes } from './app.router';
 import { NotesComponent } from './components/notes/notes.component';
 
 export const firebaseConfig = {
-  //paste your config
+  apiKey: "AIzaSyBYlaLEe0_2bDj7ejEoM_jz9fHTbYn6bIw",
+  authDomain: "mtaskslist.firebaseapp.com",
+  databaseURL: "https://mtaskslist.firebaseio.com",
+  storageBucket: "mtaskslist.appspot.com",
+  messagingSenderId: "806836766818"
 };
 
 @NgModule({
