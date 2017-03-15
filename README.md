@@ -1,4 +1,4 @@
-# MyTasksList
+# mNotes
 
 You can view the app [here](https://mnotesapp.herokuapp.com)
 
@@ -21,3 +21,9 @@ ng build
 node server
 ```
 - Open a browser and go to localhost:8080 
+
+## Licenses
+-[Angular 2](https://angular.io) MIT License
+-[Angular2 Material](https://material.angular.io) MIT License
+-[NodeJS License](https://github.com/nodejs/node/blob/master/LICENSE)
+-[MaterializeCSS](http://materializecss.com/) MIT License
