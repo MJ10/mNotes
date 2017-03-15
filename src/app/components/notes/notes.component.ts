@@ -84,5 +84,4 @@ export class NotesComponent {
       this.router.navigateByUrl('login');
     })
   }
-
 }

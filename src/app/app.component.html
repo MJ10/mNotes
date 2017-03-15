@@ -1,8 +1,10 @@
 <div class="container">
     <nav>
-        <div class="nav-wrapper light-blue darken-4">
-            <a href="/" class="brand-logo center">mNotes</a>
-        </div>
+        <md-toolbar color="primary">
+            <span>mNotes</span>
+            <span style="flex : 1 1 auto;"></span>
+            <button md-raised-button color="primary" *ngIf="isLoggedIn" (click)="onLogoutClicked()">Logout</button>
+        </md-toolbar>
     </nav>
     <router-outlet></router-outlet>
 </div>

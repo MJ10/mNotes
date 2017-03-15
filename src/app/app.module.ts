@@ -15,13 +15,7 @@ import { NotesService } from './services/note.service';
 import { routes } from './app.router';
 import { NotesComponent } from './components/notes/notes.component';
 
-export const firebaseConfig = {
-  apiKey: "AIzaSyBYlaLEe0_2bDj7ejEoM_jz9fHTbYn6bIw",
-  authDomain: "mtaskslist.firebaseapp.com",
-  databaseURL: "https://mtaskslist.firebaseio.com",
-  storageBucket: "mtaskslist.appspot.com",
-  messagingSenderId: "806836766818"
-};
+export const firebaseConfig = {/* firebase key here */};
 
 @NgModule({
   imports:      [ BrowserModule, HttpModule, FormsModule, MaterialModule.forRoot(), AngularFireModule.initializeApp(firebaseConfig), routes ],

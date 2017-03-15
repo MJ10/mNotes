@@ -1,7 +1,7 @@
 {
   "project": {
     "version": "1.0.0-beta.24",
-    "name": "mnotes"
+    "name": "mytasklist"
   },
   "apps": [
     {
@@ -18,7 +18,8 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "theme.scss"
       ],
       "scripts": [],
       "environments": {
