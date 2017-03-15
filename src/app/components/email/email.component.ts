@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 import { Router } from '@angular/router';
-import { moveIn, fallIn } from '../../router.animations';
 import { NotesService } from '../../services/note.service';
 import { User } from '../../../User';
 import { Note } from '../../../Note';
@@ -10,7 +9,6 @@ import { Note } from '../../../Note';
   selector: 'app-email',
   templateUrl: './email.component.html',
   styleUrls: ['./email.component.css'],
-  animations:[moveIn(), fallIn()]
 })
 export class EmailComponent implements OnInit {
 
