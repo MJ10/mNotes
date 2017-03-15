@@ -10,8 +10,7 @@ import { Note } from '../../../Note';
   selector: 'app-email',
   templateUrl: './email.component.html',
   styleUrls: ['./email.component.css'],
-  animations:[moveIn(), fallIn()],
-  host: {'[@moveIn]': ''}
+  animations:[moveIn(), fallIn()]
 })
 export class EmailComponent implements OnInit {
 

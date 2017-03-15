@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   
   isLoggedIn:boolean;
+  canGoBack:boolean;
 
   constructor(private af: AngularFire, private router: Router) {
     this.af.auth.subscribe((auth) => {
@@ -25,5 +26,4 @@ export class AppComponent {
     });
 
   }
-
 }

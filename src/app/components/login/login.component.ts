@@ -3,15 +3,12 @@ import { AngularFire, AuthMethods, AuthProviders} from 'angularfire2';
 import { User } from '../../../User';
 import { Note } from '../../../Note';
 import { Router } from '@angular/router';
-import { moveIn } from '../../router.animations';
 import { NotesService } from '../../services/note.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  animations: [moveIn()],
-  host: {'[@moveIn]': ''}
 })
 export class LoginComponent implements OnInit {
   error: any;

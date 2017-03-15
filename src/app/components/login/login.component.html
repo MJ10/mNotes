@@ -1,14 +1,11 @@
-<div class="card white">
-  <div class="card-content black-text">
-    <span class="card-title center">Login</span>
-          <button (click)="loginGoogle()" class="waves-effect waves-light btn">Login With Google</button><br>
-          <button routerLink="/login-email" class="waves-effect waves-light btn"><i class="material-icons left">email</i>Login With Email</button>
-          <a routerLink="/signup" class="alc"><strong>Sign up here</strong></a>
-  </div>
-</div>
-
-<md-card class="login-card">
-  <md-card-header>
-    <md-card-title>Welcome To mNotes</md-card-title>
+<md-card class="login-card center">
+  <md-card-header class="center">
+    <md-card-title class="title">Please Login to continue</md-card-title>
   </md-card-header>
+  <md-card-content class="center">
+    <button color="primary" md-raised-button (click)="loginGoogle()">Login with Google</button><br><br>
+    <button color="primary" md-raised-button routerLink="/login-email"><md-icon color="accent">email</md-icon>Login with Email</button>
+    <br><br>
+    <a routerLink="/signup" class="alc"><strong>Signup Here</strong></a>
+  </md-card-content>
 </md-card>

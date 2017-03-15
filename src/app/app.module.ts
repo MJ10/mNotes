@@ -15,7 +15,7 @@ import { NotesService } from './services/note.service';
 import { routes } from './app.router';
 import { NotesComponent } from './components/notes/notes.component';
 
-export const firebaseConfig = {/* firebase key here */};
+export const firebaseConfig = {/* firebase keys here */};
 
 @NgModule({
   imports:      [ BrowserModule, HttpModule, FormsModule, MaterialModule.forRoot(), AngularFireModule.initializeApp(firebaseConfig), routes ],
