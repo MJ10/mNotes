@@ -2,7 +2,7 @@
   <div class="card-content black-text">
     <a routerLink="/login" id="goback">Go back</a>
       <span class="card-title center">Login With Email</span>
-      <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+      <span class="error" *ngIf="error">{{ error }}</span>
       <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
         <div class="row">
           <div class="input-field col s8 offset-s2">

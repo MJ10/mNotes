@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 import { Router } from '@angular/router';
 import { NotesService } from '../../services/note.service';
-import { User } from '../../../User';
-import { Note } from '../../../Note';
 
 @Component({
   selector: 'app-email',
@@ -16,11 +14,7 @@ export class EmailComponent implements OnInit {
   error: any;
 
   constructor(public af: AngularFire,private router: Router, private noteService: NotesService) {
-    this.af.auth.subscribe(auth => { 
-      if(auth) {
-        this.onLoggedIn();
-      }
-    });
+    
   }
 
 
@@ -33,19 +27,12 @@ export class EmailComponent implements OnInit {
       {
         provider: AuthProviders.Password,
         method: AuthMethods.Password,
-      }).then(
-        (success) => {
-        this.onLoggedIn();
       }).catch(
         (err) => {
         console.log(err);
         this.error = err;
       })
     }
-  }
-
-  onLoggedIn() {
-    this.router.navigateByUrl('/notes');
   }
 
   ngOnInit() {
