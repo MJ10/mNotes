@@ -33,25 +33,8 @@ export class LoginComponent implements OnInit {
   }
 
   onLoggedIn() {
-    this.af.auth.subscribe(
-      (auth) => {
-      this.noteService.getNotes(auth.auth.uid)
-        .subscribe((user) => {
-          if(user == null || user == "null" || user.uid == null) {
-            let n_user: User = {
-              uid: auth.auth.uid,
-              notes: new Array<Note>()
-            }
-            this.noteService.addUser(n_user).subscribe(userd => {});
-            this.router.navigateByUrl('/login');
-          }
-        });
-
-        this.router.navigateByUrl('/notes');
-      })
-      .unsubscribe();
+    this.router.navigateByUrl('/notes');
   }
-
   ngOnInit() {
   }
 

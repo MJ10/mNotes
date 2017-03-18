@@ -29,10 +29,19 @@ export class NotesComponent {
   loadNotes() {
     this.notesService.getNotes(this.uid)
       .subscribe((user) => {
-        this.user = user;
-        this.notes = user.notes;
-        this.loading = false;
-      });
+        if(user == null || user == "null"){
+          let n_user: User = {
+              uid: this.uid,
+              notes: new Array<Note>()
+            }
+            this.notesService.addUser(n_user).subscribe(userd => {});
+            this.loadNotes();
+        } else{
+          this.user = user;
+          this.notes = user.notes;
+          this.loading = false;
+        }
+    });
   }
 
   addNote(formData) {
@@ -77,11 +86,5 @@ export class NotesComponent {
           this.notes = temp_notes;
         }
       });
-  }
-
-  logout() {
-    this.af.auth.logout().then((res) => {
-      this.router.navigateByUrl('login');
-    })
   }
 }
