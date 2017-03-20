@@ -40,4 +40,4 @@ node server
 - [MongoDB](https://mongodb.com)
 
 ## License
-This project is licenses under the [MIT License](https://github.com/MJ10/mNotes/LICENSE.md)
+This project is licenses under the [MIT License](https://github.com/MJ10/mNotes/blob/master/LICENSE.md)
