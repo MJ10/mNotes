@@ -2,19 +2,9 @@ const express = require('express');
 const mongojs = require('mongojs');
 
 let router = express.Router();
-let db = mongojs('// paste your database link', ['// collection name eg.:notes']);
+let db = mongojs(/* mongodb data here */);
 
-// Get all tasks
-// router.get('/tasks', (req, resp, next) => {
-//     db.tasks.find((err, tasks) => {
-//         if(err) {
-//             resp.send(err);
-//         }
-//         resp.json(tasks);
-//     });
-// });
-
-// Get single task
+// Get single note
 router.get('/user/:id', (req, resp, next) => {
     db.notes.findOne({ uid: req.params.id}, (err, user) => {
         if(err) {
@@ -24,7 +14,7 @@ router.get('/user/:id', (req, resp, next) => {
     });
 });
 
-// Update task
+// Update user
 router.put('/user/:id', (req, resp, next) => {
     var user_upd = req.body;
 
@@ -43,6 +33,7 @@ router.put('/user/:id', (req, resp, next) => {
     }
 });
 
+// Add user
 router.post('/user/add', (req, resp, next) => {
     var user = req.body;
 

@@ -1,26 +1,14 @@
-# mNotes
+# MyTasksList
 
-You can view the app [here](https://mnotesapp.herokuapp.com)
+You can view the app [here](https://mtaskslist.herokuapp.com)
 
-## Introduction
-mnotes is a basic webapp made using the MEAN(MongoDB, Express, Angular2, NodeJS) stack.
-The app helps you take notes and refer to them anywhere, on any platform.
+## About
+MyTasksList is a basic webapp made using the MEAN(MongoDB, Express, Angular2, NodeJS) stack.
 
-## Installation
-### Requirements
-
-* Git
-* NodeJS
-* MongoDB
-
-### Configuration
-- Fork the repository
+## Running The app
+- Fork the repository to your account
 - Clone to your machine
-- Configure MongoDB in `routes/api.js`
-- Configure Firebase variables in `src/app/app.module.ts`
-
-### Running the application
-- Run `npm install` in the project directory
+- Configure MongoDB in `routes/tasks.js`
 - Build the Angular2 front-end using the follwing command in the project directory
 ```bash
 ng build
@@ -29,15 +17,4 @@ ng build
 ```bash
 node server
 ```
-- Open a browser and go to `localhost:8080` 
-
-## Credits
-- [Angular2](https://angular.io)
-- [Angular2 Material](https://material.angular.io)
-- [NodeJS License](https://nodejs.org)
-- [MaterializeCSS](http://materializecss.com)
-- [Express](https://expressjs.org)
-- [MongoDB](https://mongodb.com)
-
-## License
-This project is licenses under the [MIT License](https://github.com/MJ10/mNotes/blob/master/LICENSE.md)
+- Open a browser and go to localhost:8080 
