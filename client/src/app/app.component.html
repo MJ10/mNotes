@@ -1,0 +1,10 @@
+<div class="container">
+  <nav>
+    <md-toolbar color="primary">
+      <span>mNotes</span>
+      <span style="flex : 1 1 auto;"></span>
+      <button md-raised-button color="primary" *ngIf="isLoggedIn" (click)="onLogoutClicked()">Logout</button>
+    </md-toolbar>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

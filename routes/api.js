@@ -1,10 +1,10 @@
 const express = require('express');
 const mongojs = require('mongojs');
+const config  = require('../config/config');
 
 let router = express.Router();
-let db = mongojs(/* mongodb data here */);
+let db = mongojs(config.database, ['notes']);
 
-// Get single note
 router.get('/user/:id', (req, resp, next) => {
     db.notes.findOne({ uid: req.params.id}, (err, user) => {
         if(err) {
@@ -14,9 +14,8 @@ router.get('/user/:id', (req, resp, next) => {
     });
 });
 
-// Update user
 router.put('/user/:id', (req, resp, next) => {
-    var user_upd = req.body;
+    let user_upd = req.body;
 
     if(!user_upd) {
         resp.status(400);
@@ -33,9 +32,8 @@ router.put('/user/:id', (req, resp, next) => {
     }
 });
 
-// Add user
 router.post('/user/add', (req, resp, next) => {
-    var user = req.body;
+    let user = req.body;
 
     if(!user) {
         resp.status(400);
@@ -45,7 +43,7 @@ router.post('/user/add', (req, resp, next) => {
     } else {
         db.notes.save(user, (err, user) => {
             if(err)
-                resp.send(err);
+            resp.send(err);
             resp.json(user);
         });
     }
