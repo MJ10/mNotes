@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/api', api);
 app.use('/*', (req, resp) => {
-  resp.sendFile(path.join(__dirname, 'public/index.html'));
+  resp.sendFile('/public/index.html');
 });
 
 app.listen(process.env.PORT || 8080, () => {
